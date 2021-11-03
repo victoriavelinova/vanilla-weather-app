@@ -1,0 +1,151 @@
+body {
+  background-image: url("../images/universum.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3 {
+  margin-left: 74px;
+
+  font-weight: bold;
+  color: #fff;
+}
+
+h1 {
+  font-size: 65px;
+  margin-top: 200px;
+  font-family: "Amatic SC", cursive;
+}
+
+h2,
+h3 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+  margin-top: -10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(255, 255, 255, 0.301);
+}
+.container {
+  border: 0.1px solid #fff;
+  background: rgba(119, 148, 145, 0.06);
+
+  max-width: 60%;
+  margin-top: 100px;
+  padding-bottom: 50px;
+}
+
+.form-control {
+  margin-top: 100px;
+  margin-left: 70px;
+}
+
+.btn-secondary {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff;
+  position: relative;
+  right: -376px;
+  top: -38px;
+}
+
+.degree {
+  font-size: 100px;
+  margin-left: 74px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: -10px;
+}
+.units {
+  font-size: 30px;
+
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: -10px;
+}
+
+.fa-cloud {
+  color: rgba(88, 132, 186, 0.96);
+  position: relative;
+
+  right: -170px;
+  bottom: 150px;
+  font-size: 90px;
+}
+
+.meteorological {
+  position: relative;
+  right: -58.4%;
+  margin-top: -20%;
+  color: #fff;
+  font-family: "Open Sans Condensed", sans-serif;
+
+  font-size: 30px;
+  max-width: 364px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 5px;
+  transition: all 200ms ease-in-out;
+}
+
+.meteorological:hover {
+  background: rgba(255, 255, 255, 0.301);
+}
+
+.card {
+  position: relative;
+  right: -47px;
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.137);
+  transition: all 200ms ease-in-out;
+}
+.card:hover {
+  background: rgba(255, 255, 255, 0.301);
+}
+.card-body {
+  margin-left: 10%;
+  margin-bottom: -20px;
+}
+.card-title {
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-size: 35px;
+  color: #fff;
+}
+.card-date {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 20px;
+  margin-top: -15px;
+  color: #fff;
+}
+
+.fa-sun {
+  position: relative;
+  right: -50%;
+  margin-top: -50px;
+  font-size: 50px;
+  color: #fcfc6d;
+}
+.card-degree {
+  position: relative;
+  font-size: 50px;
+  font-family: "Cabin Sketch", cursive;
+  color: #fff;
+}
+
+.row {
+  --bs-gutter-x: -10rem;
+  position: relative;
+  right: 50px;
+}
