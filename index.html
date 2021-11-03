@@ -40,24 +40,35 @@
   </head>
   <body>
     <div class="container">
-      <div class="weahter-app">
-        <h1 id="city">Vienna</h1>
-        <h2>Sunday 26 September</h2>
-        <h3>13:00</h3>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="clear"
-            />
-            12°C | °F
-          </div>
-          <div class="col-6">
-            <ul>
-              <li id="feel-like">Feels like: 11°C</li>
-              <li id="wind">Wind: 5 km/h</li>
-              <li id="humidity">Humidity: 5%</li>
-            </ul>
+      <div class="weather-app-wrapper">
+        <div class="weahter-app">
+          <h1 id="city">Vienna</h1>
+          <h2>Sunday 26 September</h2>
+          <h3>13:00</h3>
+
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="clear"
+                  class="float-left"
+                />
+                <span class="float-left">
+                  <strong>12</strong>
+
+                  <span class="units">°C | <a href="#">°F</a></span>
+                </span>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <ul>
+                <li id="feel-like">Feels like: 11°C</li>
+                <li id="wind">Wind: 5 km/h</li>
+                <li id="humidity">Humidity: 5%</li>
+              </ul>
+            </div>
           </div>
         </div>
         <small>

@@ -24,7 +24,7 @@ h3 {
 }
 
 h3 {
-  margin-top: 0px;
+  margin-top: -10px;
 }
 
 li {
@@ -37,10 +37,38 @@ li {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: lighter;
 }
-.weahter-app {
+
+img {
+  position: relative;
+
+  width: 64px;
+  height: 64px;
+  right: -120px;
+}
+.clearfix {
+  margin-left: -72px;
+}
+.weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
+}
+.weahter-app {
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 5px;
+}
+
+.weather-temperature strong {
+  color: #fff;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: bold;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  top: -34px;
 }
