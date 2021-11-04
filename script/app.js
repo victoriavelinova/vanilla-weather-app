@@ -1,5 +1,3 @@
-//Datum und Uhrzeit
-
 let now = new Date();
 
 let h2 = document.querySelector("h2");
@@ -44,54 +42,29 @@ let months = [
 let month = months[now.getMonth()];
 h2.innerHTML = `${day}, ${date} ${month} ${year}`;
 h3.innerHTML = `${hours}:${minutes}`;
-//Datum und Uhrzeit ende
 
-//search engine
-
-//Stadt eingabe
-function search(city) {
-  let apiKey = "197ef3a642b76eef90e131866f74a0a0";
-  let units = "metric";
-
-  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-  let apiUrl = `${apiEndpoint}?q=${city}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(showCurrentTemperature);
-}
-
-function handleSubmit(event) {
-  event.preventDefault();
-  let city = document.querySelector("#search-text-input").value;
-  search(city);
-}
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
-//funktion der Temperatur, Antwort
-
-function showCurrentTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let wind = Math.round(response.data.wind.speed);
-  let humidity = Math.round(response.data.main.humidity);
-  let feel = Math.round(response.data.main.feels_like);
-
-  let feelElement = document.querySelector("#feel-like");
-  feelElement.innerHTML = `Feels Like: ${feel}°C`;
-
-  let windElement = document.querySelector("#wind");
-  windElement.innerHTML = `Wind: ${wind}km/h`;
-
-  let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `Humidity :${humidity}%`;
-
+function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = `${temperature}`;
+  let cityElement = document.querySelector("#city");
+  let feelElement = document.querySelector("#feel-like");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
 
-  let h1 = document.querySelector("#city");
-  h1.innerHTML = response.data.name;
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  feelElement.innerHTML = Math.round(response.data.main.feels_like);
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-search("Vienna");
+let apiKey = "197ef3a642b76eef90e131866f74a0a0";
+let city = "Vienna";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-//°C und °F link erstellen und switchenfunction celsius(event) { event.preventDefault(); temperature.innerHTML = "15";let celsiusLink = document.querySelector("#celsius-link");celsiusLink.addEventListener("click", celsius);
-
-//°Ffunction fahrenheitDegree(event) { event.preventDefault(); let temperatureElement = document.querySelector("#temperature"); let temperature = temperatureElement.innerHTML; temperature = Number(temperature); temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);let fahrenheitLink = document.querySelector("#fahrenheit-link");fahrenheitLink.addEventListener("click", fahrenheitDegree);
+axios.get(apiUrl).then(displayTemperature);
