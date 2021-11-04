@@ -5,7 +5,7 @@ h3 {
   color: #fff;
 }
 h1 {
-  font-size: 24px;
+  font-size: 30px;
   font-family: "Amatic SC", cursive;
   margin-bottom: 0px;
 }
@@ -39,14 +39,6 @@ img {
   height: 64px;
   right: -120px;
 }
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgba(255, 255, 255, 0.301);
-}
 
 body {
   margin-top: -40px;
@@ -69,6 +61,23 @@ body {
     background-position: 0 50%;
   }
 }
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.301);
+}
+
+.weather-temperature .active {
+  color: #fff;
+  text-decoration: none;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  color: rgba(255, 255, 255, 0.301);
+  text-decoration: none;
+}
+
 .clearfix {
   margin-left: -72px;
 }
