@@ -32,14 +32,6 @@ li {
   font-weight: lighter;
 }
 
-img {
-  position: relative;
-
-  width: 64px;
-  height: 64px;
-  right: -120px;
-}
-
 body {
   margin-top: -40px;
   width: 100%;
@@ -105,4 +97,25 @@ a {
   font-size: 16px;
   color: #fff;
   top: -34px;
+}
+.icon {
+  position: relative;
+
+  width: 64px;
+  height: 64px;
+  right: -90px;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.weather-forecast-date {
+  font-size: 20px;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.6;
 }
